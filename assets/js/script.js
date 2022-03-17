@@ -42,7 +42,7 @@ function imageGen() {
    fetch(apiUrl).then(function (response) {
       if (response.ok) {
          response.json().then(function (data) {
-            console.log(data);
+            pullImage(data);
          });
       }
    })
@@ -59,15 +59,26 @@ function pullData(data) {
    var city = data.results[0].location.city;
    var state = data.results[0].location.state;
 
-   var tempArray = [
-      title, firstName, lastName, age, city, state
-   ]
+   var tempObj = {
+      "title": title, 
+      "first-name": firstName, 
+      "last-name": lastName, 
+      "age": age, 
+      "city": city, 
+      "state": state
+   }
 
-   console.log(tempArray)
+   buildCardText(tempObj)
 }
 
-function buildCard() {
+function pullImage(data) {
+   var imageLink = data.image;
 
+   console.log(imageLink)
+}
+
+function buildCardText(dataObj) {
+   
 }
 
 imageGen();
