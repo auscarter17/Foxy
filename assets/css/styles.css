@@ -2,3 +2,9 @@
     font-family: 'Fredoka One', sans-serif;
     font-weight: lighter;
 }
+
+body {
+    background-color: hsl(0, 0%, 21%);
+    min-height: 100vh;
+}
+
