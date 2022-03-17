@@ -36,6 +36,21 @@ function nameGen() {
       })
 }
 
+function imageGen() {
+   var apiUrl = "https://randomfox.ca/floof";
+
+   fetch(apiUrl).then(function (response) {
+      if (response.ok) {
+         response.json().then(function (data) {
+            console.log(data);
+         });
+      }
+   })
+      .catch(function (error) {
+         alert("Unable to connect to name generator API.");
+      })
+}
+
 function pullData(data) {
    var title = data.results[0].name.title;
    var firstName = data.results[0].name.first;
@@ -55,4 +70,4 @@ function buildCard() {
 
 }
 
-nameGen();
+imageGen();
