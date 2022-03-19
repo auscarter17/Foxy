@@ -50,6 +50,25 @@ body {
     transform: rotateY(180deg);
   }
 
+  .fox-details, .fox-bio {
+    position:absolute;
+    bottom:0;
+  }
+
+  span {
+    background-color: rgba(64, 138, 138, 0.5);
+    line-height: 2;
+    
+  }
+
+  .fox-details {
+    left: 0;
+  }
+
+  .fox-bio {
+    right: 0;
+  }
+
   .container {
       z-index: 9999;
   }
@@ -62,4 +81,8 @@ body {
   #checkBtn, #crossBtn {
       margin-top: 20px;
       padding: 0px 100px;
+  }
+
+  .button-right {
+    border-top-right-radius: 50px;
   }
