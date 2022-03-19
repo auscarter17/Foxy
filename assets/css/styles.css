@@ -8,6 +8,16 @@ body {
     min-height: 100vh;
 }
 
+.foxText {
+  background: #F5AB49;
+  background: -webkit-linear-gradient(to top, #F5AB49 40%, #F7F8FF 67%, #F5AB49 100%);
+  background: -moz-linear-gradient(to top, #F5AB49 40%, #F7F8FF 67%, #F5AB49 100%);
+  background: linear-gradient(to top, #F5AB49 40%, #F7F8FF 67%, #F5AB49 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .flip-card {
     background-color: transparent;
     width: 800px;
@@ -84,5 +94,16 @@ body {
   }
 
   .button-right {
-    border-top-right-radius: 50px;
+    border-radius: 50px;
   }
+
+#checkBtn {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+#crossBtn {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: black;
+}
