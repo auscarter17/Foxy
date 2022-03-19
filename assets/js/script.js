@@ -1,3 +1,11 @@
+var landingPageEl = document.querySelector("#landing-page");
+var cardPageEl = document.querySelector("#card-page");
+var startCardBtnEl = document.querySelector("#start-card");
+var checkBtnEl = document.querySelector("#checkBtn");
+var crossBtnEl = document.querySelector("#crossBtn");
+
+var savedFoxes = [];
+
 var bio = [
    "I enjoy breadcrumb lattes from StarDucks",
 
@@ -20,6 +28,24 @@ var bio = [
    "I just want someone to make me fall mallardly in love with them"
 ]
 
+function landingShow() {
+   landingPageEl.className = "show";
+   cardPageEl.className = "hide";
+}
+function buildCard() {
+   var cardTextEl = document.querySelector("#card-text");
+   var cardImgEl = document.querySelector("#fox-image-container");
+
+   cardTextEl.innerHTML = "";
+   cardImgEl.innerHTML = "";
+
+   landingPageEl.className = "hide";
+   cardPageEl.className = "show";
+
+   nameGen();
+   imageGen();
+}
+
 // function to fetch api for random bio generation
 function nameGen() {
    var apiUrl = "https://randomuser.me/api/?nat=us";
@@ -28,7 +54,6 @@ function nameGen() {
    fetch(apiUrl).then(function (response) {
       if (response.ok) {
          response.json().then(function (data) {
-            console.log(data);
             // pass data to be extracted
             pullData(data);
          });
@@ -84,13 +109,15 @@ function pullData(data) {
    }
 
    // call to generate card text
-   buildCardText(tempObj)
+   buildCardText(tempObj);
 }
 
 // function to pull image link 
 function pullImage(data) {
    // image link
    var imageLink = data.image;
+   buildCardImg(imageLink);
+   return imageLink;
 }
 
 // function used to generate all the text for each fox card
@@ -104,31 +131,81 @@ function buildCardText(dataObj) {
 
    // create name element for card
    var cardNameEl = document.createElement("p");
-   cardNameEl.textContent = dataObj.title + ". " + dataObj.first + " " + dataObj.last;
+   cardNameEl.setAttribute("id", "card-name");
+   cardNameEl.textContent = dataObj.title + " " + dataObj.first + " " + dataObj.last;
    cardBodyEl.appendChild(cardNameEl);
 
    // create age element for card
    var cardAgeEl = document.createElement("p");
+   cardAgeEl.setAttribute("id", "card-age");
    cardAgeEl.textContent = dataObj.age;
    cardBodyEl.appendChild(cardAgeEl);
 
    // create city element for card
    var cardCityEl = document.createElement("p");
+   cardCityEl.setAttribute("id", "card-city")
    cardCityEl.textContent = dataObj.city;
    cardBodyEl.appendChild(cardCityEl);
 
    // create state element for card
    var cardStateEl = document.createElement("p");
+   cardStateEl.setAttribute("id", "card-state");
    cardStateEl.textContent = dataObj.state;
    cardBodyEl.appendChild(cardStateEl);
 
    cardRowEl.appendChild(cardBodyEl);
 }
 
-function buildCardImg() {
+function buildCardImg(imageLink) {
+   var imageContainerEl = document.querySelector("#fox-image-container");
+   var foxImgEl = document.createElement("img");
 
+   foxImgEl.setAttribute("id", "fox-image");
+   //TODO ADD STYLE CLASS
+   /*foxImgEl.className =*/ 
+   foxImgEl.src = imageLink;
+   imageContainerEl.appendChild(foxImgEl);
 }
 
+function yesOrNo(event) {
+   var targetId = event.target.getAttribute("id");
+   var cardImgLink = $("#fox-image").attr("src");
+   var cardName = $("#card-name").text();
+   var cardAge = $("#card-age").text();
+   var cardCity = $("#card-city").text();
+   var cardState = $("#card-state").text();
 
+   var tempObj = {};
 
-imageGen();
+   if (targetId == "checkBtn") {
+      tempObj = {
+         "cardImgLink": cardImgLink,
+         "cardName": cardName,
+         "cardAge": cardAge,
+         "cardCity": cardCity,
+         "cardState": cardState
+      }
+
+      savedFoxes.push(tempObj);
+      console.log(savedFoxes);
+      
+      saveCard();
+      buildCard();
+   } else {
+      buildCard();
+   }
+}
+
+function saveCard() {
+   localStorage.setItem("foxy", JSON.stringify(savedFoxes));
+}
+
+function loadCards() {
+   savedFoxes = JSON.parse(localStorage.getItem("foxy"));
+   console.log(savedFoxes);
+}
+
+addEventListener("load", landingShow);
+addEventListener("load", loadCards);
+startCardBtnEl.addEventListener("click", buildCard);
+cardPageEl.addEventListener("click", yesOrNo)
