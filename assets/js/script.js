@@ -52,8 +52,8 @@ function buildCard() {
    var cardImgEl = document.querySelector("#fox-image-container");
 
    // clear both sides of card
-   cardTextEl.innerHTML = "";
-   cardImgEl.innerHTML = "";
+    cardTextEl.innerHTML = "";
+    cardImgEl.innerHTML = "";
 
    // hide the landing elements
    landingPageEl.className = "hide";
@@ -149,6 +149,12 @@ function buildCardText(dataObj) {
    var cardBodyEl = document.createElement("div");
    cardBodyEl.classList = "fox-details column is-two-fifths has-text-left";
 
+   var cardLogo = document.createElement("img");
+   cardLogo.setAttribute("style", "max-height: 60px");
+   cardLogo.src = "./assets/images/New Project.png";
+   cardBodyEl.appendChild(cardLogo);
+
+
    // create name element for card
    var cardNameEl = document.createElement("h5");
    cardNameEl.setAttribute("id", "card-name");
@@ -186,6 +192,7 @@ function buildCardText(dataObj) {
    cardRowEl.appendChild(cardBodyEl);
 }
 
+// 
 function cardBio() {
    var tempArr = "";
    tempArr = bio.shift();
