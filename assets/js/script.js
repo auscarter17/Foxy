@@ -240,6 +240,9 @@ function saveCard() {
 // simple function to load the localStorage into the global array
 function loadCards() {
    savedFoxes = JSON.parse(localStorage.getItem("foxy"));
+   if (savedFoxes ==  null) {
+      savedFoxes = [];
+   }
    console.log(savedFoxes);
 }
 
