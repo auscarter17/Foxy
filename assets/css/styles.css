@@ -6,6 +6,7 @@
 body {
     background-color: hsl(0, 0%, 21%);
     min-height: 100vh;
+  
 }
 
 .hero-body {
@@ -127,13 +128,14 @@ body {
   .hero-body {
     background-color: #34ADFF;
     background-image: -webkit-linear-gradient(30deg, #2f2f2f 45%, #4CBFFF 45%);
-    min-height: 400px;
+    min-height: 100vh;
+    
   }
 
-  .navbar {
+  /* .navbar {
     background-color: #34ADFF;
   background-image: -webkit-linear-gradient(30deg, #2f2f2f 32.45%, #4CBFFF 32.45%);
-  }
+  } */
 
   .btn {
   display: block;
@@ -143,7 +145,7 @@ body {
   border: none;
   background-color: #2f2f2f;
   color: #fff;
-  font-size: 18px;
+  font-size: 25px;
   border-radius: 6px;
   outline: none;
   cursor: pointer;
@@ -155,8 +157,29 @@ body {
   box-shadow: 0 15px 15px #2f2f2f;
 }
 
-.logo-container {
-  background-image: url(./assets/images/newFoxLogo.png);
-  height: auto;
+.logo-text {
+    left: 0;
+    position:absolute;
+    text-align:center;
+    top: 30px;
+    width: 100%
+}
+
+.img {
   width: auto;
+  height: auto;
+  position: relative;
+  
+}
+
+.btnHome {
+  position: relative;
+  display: block;
+  margin-top: 40rem;
+  right: 27rem;
+  padding: 1.5rem 10rem 1.5rem 6rem;
+}
+
+.tile {
+  border-radius: 10px;
 }
