@@ -63,3 +63,11 @@ body {
       margin-top: 20px;
       padding: 0px 100px;
   }
+
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
