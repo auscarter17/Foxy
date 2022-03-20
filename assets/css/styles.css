@@ -8,6 +8,20 @@ body {
     min-height: 100vh;
 }
 
+.hero-body {
+  justify-content: center;
+}
+
+.foxText {
+  background: #F5AB49;
+  background: -webkit-linear-gradient(to top, #F5AB49 40%, #F7F8FF 67%, #F5AB49 100%);
+  background: -moz-linear-gradient(to top, #F5AB49 40%, #F7F8FF 67%, #F5AB49 100%);
+  background: linear-gradient(to top, #F5AB49 40%, #F7F8FF 67%, #F5AB49 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .flip-card {
     background-color: transparent;
     width: 800px;
@@ -45,9 +59,32 @@ body {
   }
   
   .flip-card-back {
-    background-color: #2980b9;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
     color: white;
+    text-shadow: -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
     transform: rotateY(180deg);
+  }
+
+  .fox-details, .fox-bio {
+    font-family: 'Indie Flower', cursive;
+    position:absolute;
+    bottom:0;
+  }
+
+  span {
+    line-height: 2;
+    
+  }
+
+  .fox-details {
+    left: 0;
+  }
+
+  .fox-bio {
+    right: 0;
   }
 
   .container {
@@ -60,10 +97,23 @@ body {
   }
 
   #checkBtn, #crossBtn {
-      margin-top: 20px;
       padding: 0px 100px;
   }
 
+  .button-right {
+    border-radius: 50px;
+  }
+
+#checkBtn {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+#crossBtn {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: black;
+}
   .show {
     display: block;
   }
