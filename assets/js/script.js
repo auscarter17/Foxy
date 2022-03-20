@@ -19,7 +19,7 @@ var foxBio = "";
 var bio = [
    "Enjoys long walks on any beach where there may be chickens.",
 
-   "I’m not like other foxes, I’m a totally authentic fur real free spirit.",
+   "I'm not like other foxes, I'm a totally authentic fur real free spirit.",
 
    "Most well known for jumping over the lazy dog.",
 
@@ -29,9 +29,9 @@ var bio = [
 
    "I always have a hard time making decisions, I can be a little fennecy.",
 
-   "Everyone keeps asking me what I say, I don’t get it.",
+   "Everyone keeps asking me what I say, I don't get it.",
 
-   "Oh, you said FAUX fur, that’s a huge relief.",
+   "Oh, you said FAUX fur, that's a huge relief.",
 
    "You may recognize me from the hit video game Minecraft.",
 
@@ -147,7 +147,7 @@ function buildCardText(dataObj) {
 
    // create element to card
    var cardBodyEl = document.createElement("div");
-   cardBodyEl.classList = "fox-details column is-two-fifths has-text-left";
+   cardBodyEl.classList = "fox-details";
 
    var cardLogo = document.createElement("img");
    cardLogo.setAttribute("style", "max-height: 60px");
@@ -184,7 +184,7 @@ function buildCardText(dataObj) {
    // TODO LOREM NEEDS GONE
    var cardDetails = document.createElement("span");
    cardDetails.setAttribute("id", "card-Details");
-   cardDetails.classList = "fox-bio column is-two-fifths is-offset-2 has-text-right";
+   cardDetails.classList = "fox-bio";
    cardDetails.textContent = foxBio;
    cardBodyEl.appendChild(cardDetails);
 
