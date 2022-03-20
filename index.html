@@ -19,16 +19,13 @@
     <title>Foxy</title>
   </head>
   <body>
+
     <!--Header-->
     <nav class="navbar is-dark">
       <!--'logo'-->
       <div class="navbar-brand">
         <a class="navbar-item">
-          <img
-            src="./assets/images/New Project.png"
-            alt="site logo"
-            style="max-height: 60px"
-          />
+          <img src="./assets/images/New Project.png" alt="site logo" style="max-height: 60px" />
         </a>
       </div>
     </nav>
@@ -64,12 +61,14 @@
             </article>
           </div>
         </div>
+        <button id="start-card">START</button>
         <!--END COLUMN-->
       </div>
     </section>
+  </div>
 
-    <!-- image card-->
-    <div class="hide" id="div-hide">
+  <!-- image card-->
+  <div class="hide" id="card-page">
     <section class="section">
       <div class="container">
         <div class="columns">
@@ -77,21 +76,19 @@
             <div class="flip-card card is-shadowless">
               <div class="flip-card-inner card-image">
                 <div class="flip-card-front">
-                <!--IMAGE SRC STARTS-->
-                <figure class="image is-4by3">
-                  <!--Generate image here-->
-                  <img
-                    src="https://bulma.io/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                    id="random-fox"
-                  />
-                  
+                  <!--IMAGE SRC STARTS-->
+                  <figure class="image is-4by3">
+                    <!--Generate image here-->
+                    <div id="fox-image-container">
 
-                  <!--CHECK OR CROSS BUTTONS w/ ID-->
-                 
-                </figure>
+                    </div>
+
+
+                    <!--CHECK OR CROSS BUTTONS w/ ID-->
+
+                  </figure>
                 </div>
-                <div class="flip-card-back columns">
+                <div class="flip-card-back columns" id="card-text">
                   <img
                     src="./assets/images/New Project.png"
                     alt="site logo"
@@ -99,16 +96,14 @@
                   />
                     <span class="fox-details column is-two-fifths has-text-left">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi vitae eius facilis, esse ducimus impedit natus sequi illo? Maiores in ab itaque doloribus sint dolorem blanditiis atque veniam odio ex.</span>
                     <span class="fox-bio column is-two-fifths is-offset-2 has-text-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis rem magni cumque dicta voluptatibus quo. Nam sit accusamus optio nostrum enim sed, excepturi repellat est laboriosam eligendi inventore vitae reiciendis!</span>
+
                 </div>
                 <!--END IMG-->
               </div>
             </div>
-            
-            </div>
+
           </div>
         </div>
-      </div>
-
       </div>
       <div class="buttons has-addons is-centered">
         <button
@@ -123,9 +118,13 @@
         >
         <!-- find new color x or change button color to add visibility -->
           ✘
-        </button>
-      </section>
 
-    <script src="./assets/js/script.js"></script>
-  </body>
+        </button>
+    </section>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
 </html>

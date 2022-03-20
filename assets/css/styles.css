@@ -114,3 +114,10 @@ body {
   border-bottom-right-radius: 50px;
   color: black;
 }
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
