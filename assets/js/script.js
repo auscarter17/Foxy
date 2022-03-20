@@ -17,25 +17,25 @@ var foxBio = "";
 
 // TODO CHANGE BIO AND ADD TO CARDS
 var bio = [
-   "I enjoy breadcrumb lattes from StarDucks",
+   "Enjoys long walks on any beach where there may be chickens.",
 
-   "I never mind splitting the bill",
+   "I’m not like other foxes, I’m a totally authentic fur real free spirit.",
 
-   "I loved rom-coms! My favorite is Love Quacktually",
+   "Most well known for jumping over the lazy dog.",
 
-   "If you're under 2 feet tall or a goose please don't quack me",
+   "Retired spaceship pilot, now a professional fighter.",
 
-   "Looking for someone to sweep me off my webbed feet",
+   "You can usually find me hanging out with my best friend, a very fast hedgehog.",
 
-   "Feather? I HARDLY KNOW 'ER! But I'd like to know you better",
+   "I always have a hard time making decisions, I can be a little fennecy.",
 
-   "Enjoys long walks at the local park",
+   "Everyone keeps asking me what I say, I don’t get it.",
 
-   "If you wanna talk just message me, don't be a chicken. Seriously, please no chickens",
+   "Oh, you said FAUX fur, that’s a huge relief.",
 
-   "Living life a day at a time, I'm just winging it, baby",
+   "You may recognize me from the hit video game Minecraft.",
 
-   "I just want someone to make me fall mallardly in love with them"
+   "My favorite show is Paw & Order."
 ]
 
 // on load, show landing elements and hide card elements
