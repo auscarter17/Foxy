@@ -121,3 +121,42 @@ body {
   .hide {
     display: none;
   }
+
+  /* Splash Page Style */
+
+  .hero-body {
+    background-color: #34ADFF;
+    background-image: -webkit-linear-gradient(30deg, #2f2f2f 45%, #4CBFFF 45%);
+    min-height: 400px;
+  }
+
+  .navbar {
+    background-color: #34ADFF;
+  background-image: -webkit-linear-gradient(30deg, #2f2f2f 32.45%, #4CBFFF 32.45%);
+  }
+
+  .btn {
+  display: block;
+  margin: 40px 0;
+  width: 240px;
+  height: 80px;
+  border: none;
+  background-color: #2f2f2f;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+.btn1:hover {
+  transform: rotateX(15deg);
+  box-shadow: 0 15px 15px #2f2f2f;
+}
+
+.logo-container {
+  background-image: url(./assets/images/newFoxLogo.png);
+  height: auto;
+  width: auto;
+}
