@@ -12,6 +12,9 @@ var crossBtnEl = document.querySelector("#crossBtn");
 // global variable to save foxes
 var savedFoxes = [];
 
+// global bio 
+var foxBio = "";
+
 // TODO CHANGE BIO AND ADD TO CARDS
 var bio = [
    "I enjoy breadcrumb lattes from StarDucks",
@@ -138,14 +141,15 @@ function pullImage(data) {
 
 // function used to generate all the text for each fox card
 function buildCardText(dataObj) {
+
    // var to access element to hold card
    var cardRowEl = document.querySelector(".flip-card-back");
 
    // create element to card
-   var cardBodyEl = document.createElement("p");
+   var cardBodyEl = document.createElement("div");
 
    // create name element for card
-   var cardNameEl = document.createElement("p");
+   var cardNameEl = document.createElement("h5");
    cardNameEl.setAttribute("id", "card-name");
    cardNameEl.textContent = dataObj.title + " " + dataObj.first + " " + dataObj.last;
    cardBodyEl.appendChild(cardNameEl);
@@ -168,9 +172,27 @@ function buildCardText(dataObj) {
    cardStateEl.textContent = dataObj.state;
    cardBodyEl.appendChild(cardStateEl);
 
+   cardBio();
+
+   // TODO LOREM NEEDS GONE
+   var cardDetails = document.createElement("span");
+   cardDetails.setAttribute("id", "card-Details");
+   cardDetails.classList = "fox-details column is-two-fifths has-text-left";
+   cardDetails.textContent = foxBio;
+   cardBodyEl.appendChild(cardDetails);
+
    // add card to the card div element
    cardRowEl.appendChild(cardBodyEl);
 }
+
+function cardBio() {
+   var tempArr = "";
+   tempArr = bio.pop();
+   foxBio = tempArr;
+   bio.push(tempArr);
+   
+   }
+
 
 // function to append the image to the image container div element
 function buildCardImg(imageLink) {
