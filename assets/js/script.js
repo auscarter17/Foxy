@@ -147,6 +147,7 @@ function buildCardText(dataObj) {
 
    // create element to card
    var cardBodyEl = document.createElement("div");
+   cardBodyEl.classList = "fox-details column is-two-fifths has-text-left";
 
    // create name element for card
    var cardNameEl = document.createElement("h5");
@@ -177,7 +178,7 @@ function buildCardText(dataObj) {
    // TODO LOREM NEEDS GONE
    var cardDetails = document.createElement("span");
    cardDetails.setAttribute("id", "card-Details");
-   cardDetails.classList = "fox-details column is-two-fifths has-text-left";
+   cardDetails.classList = "fox-bio column is-two-fifths is-offset-2 has-text-right";
    cardDetails.textContent = foxBio;
    cardBodyEl.appendChild(cardDetails);
 
@@ -187,7 +188,7 @@ function buildCardText(dataObj) {
 
 function cardBio() {
    var tempArr = "";
-   tempArr = bio.pop();
+   tempArr = bio.shift();
    foxBio = tempArr;
    bio.push(tempArr);
    
@@ -200,7 +201,6 @@ function buildCardImg(imageLink) {
    var imageContainerEl = document.querySelector("#fox-image-container");
    // create an image element
    var foxImgEl = document.createElement("img");
-
    // set the id of the image for access purposes
    foxImgEl.setAttribute("id", "fox-image");
    //TODO ADD STYLE CLASS
