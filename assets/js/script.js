@@ -44,6 +44,7 @@ var bio = [
 function landingShow() {
    landingPageEl.className = "show";
    cardPageEl.className = "hide";
+   savedPageEl.className = "hide";
 
    loadCards();
 
