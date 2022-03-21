@@ -2,6 +2,8 @@
 var landingPageEl = document.querySelector("#landing-page");
 // access card page
 var cardPageEl = document.querySelector("#card-page");
+// access saved card page
+var savedPageEl = document.querySelector("#saved-page");
 //access landing page start button
 var startCardBtnEl = document.querySelector("#start-card");
 // access check button
@@ -42,6 +44,10 @@ var bio = [
 function landingShow() {
    landingPageEl.className = "show";
    cardPageEl.className = "hide";
+
+   loadCards();
+
+   console.log(savedFoxes)
 }
 
 // function to build each card
@@ -52,8 +58,8 @@ function buildCard() {
    var cardImgEl = document.querySelector("#fox-image-container");
 
    // clear both sides of card
-    cardTextEl.innerHTML = "";
-    cardImgEl.innerHTML = "";
+   cardTextEl.innerHTML = "";
+   cardImgEl.innerHTML = "";
 
    // hide the landing elements
    landingPageEl.className = "hide";
@@ -198,8 +204,8 @@ function cardBio() {
    tempArr = bio.shift();
    foxBio = tempArr;
    bio.push(tempArr);
-   
-   }
+
+}
 
 
 // function to append the image to the image container div element
@@ -211,7 +217,7 @@ function buildCardImg(imageLink) {
    // set the id of the image for access purposes
    foxImgEl.setAttribute("id", "fox-image");
    //TODO ADD STYLE CLASS
-   /*foxImgEl.className =*/ 
+   /*foxImgEl.className =*/
    // set the source to the generated image link
    foxImgEl.src = imageLink;
    // add the image to the image container
@@ -249,7 +255,7 @@ function yesOrNo(event) {
 
       // push the temp object to the global array
       savedFoxes.push(tempObj);
-      
+
       // save the card details
       saveCard();
       // rebuild a new card
@@ -261,6 +267,61 @@ function yesOrNo(event) {
    }
 }
 
+// function to display saved cards
+function displaySavedCards() {
+   landingPageEl.classList = "hide";
+   cardPageEl.classList = "hide";
+   savedPageEl.classList = "show";
+
+   // load cards
+   loadCards();
+
+   // select the card columns element
+   var savedCardsEl = document.querySelector(".saved-columns");
+
+   // loop through global array
+   for (var i = 0; i < savedFoxes.length; i++) {
+      // create card body element
+      var cardBodyEl = document.createElement("div");
+      // assign style
+      cardBodyEl.classList = "column saved-column is-two-fifths";
+
+      // create card image element
+      var cardImgEl = document.createElement("img");
+      cardImgEl.src = savedFoxes[i].cardImgLink;
+      cardImgEl.classList = "saved-card-img";
+      cardBodyEl.appendChild(cardImgEl);
+
+      // create card name element
+      var cardNameEl = document.createElement("p");
+      cardNameEl.classList = "saved-card-img";
+      cardNameEl.textContent = savedFoxes[i].cardName;
+      cardBodyEl.appendChild(cardNameEl);
+
+      // create card age element
+      var cardAgeEl = document.createElement("p");
+      cardAgeEl.classList = "saved-card-age";
+      cardAgeEl.textContent = savedFoxes[i].cardAge;
+      cardBodyEl.appendChild(cardAgeEl);
+
+      // create card city element
+      var cardCityEl = document.createElement("p");
+      cardCityEl.classList = "saved-card-city";
+      cardCityEl.textContent = savedFoxes[i].cardCity;
+      cardBodyEl.appendChild(cardCityEl);
+
+      // create card state element
+      var cardStateEl = document.createElement("p");
+      cardStateEl.classList = "saved-card-state";
+      cardStateEl.textContent = savedFoxes[i].cardState;
+      cardBodyEl.appendChild(cardStateEl);
+
+      // append card body to card container
+      savedCardsEl.appendChild(cardBodyEl);
+   }
+
+}
+
 // simple function to save the global array to localStorage
 function saveCard() {
    localStorage.setItem("foxy", JSON.stringify(savedFoxes));
@@ -269,16 +330,14 @@ function saveCard() {
 // simple function to load the localStorage into the global array
 function loadCards() {
    savedFoxes = JSON.parse(localStorage.getItem("foxy"));
-   if (savedFoxes ==  null) {
+
+   if (savedFoxes === null) {
       savedFoxes = [];
    }
-   console.log(savedFoxes);
 }
 
 // event listener to show landing page on load
 addEventListener("load", landingShow);
-// event listener to load localStorage into global variable on load
-addEventListener("load", loadCards);
 // event listener on start button (landing page) to move from landing page to card page
 startCardBtnEl.addEventListener("click", buildCard);
 // event listener on either check or cross button (card page) to either save data
