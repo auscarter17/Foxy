@@ -234,22 +234,25 @@ function buildCardImg(imageLink) {
 function yesOrNo(event) {
    // get the id of the button that was clicked
    var targetId = event.target.getAttribute("id");
-   // get the various data for saving
-   // image link
-   var cardImgLink = $("#fox-image").attr("src");
-   // fox title, first and last name
-   var cardName = $("#card-name").text();
-   // fox age
-   var cardAge = $("#card-age").text();
-   // fox city
-   var cardCity = $("#card-city").text();
-   // fox state
-   var cardState = $("#card-state").text();
-   // fox bio
-   var cardBio = $("#card-bio").text();
 
-   // initialize a temp object
-   var tempObj = {};
+   if (event.target.classList.contains("button")) {
+      // get the various data for saving
+      // image link
+      var cardImgLink = $("#fox-image").attr("src");
+      // fox title, first and last name
+      var cardName = $("#card-name").text();
+      // fox age
+      var cardAge = $("#card-age").text();
+      // fox city
+      var cardCity = $("#card-city").text();
+      // fox state
+      var cardState = $("#card-state").text();
+      // fox bio
+      var cardBio = $("#card-bio").text();
+
+      // initialize a temp object
+      var tempObj = {};
+   
 
    // if check button was clicked
    if (targetId == "checkBtn") {
@@ -274,6 +277,7 @@ function yesOrNo(event) {
       // rebuild a new card
       buildCard();
    }
+}
 }
 
 // function to display saved cards
