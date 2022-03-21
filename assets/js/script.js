@@ -274,6 +274,7 @@ function displaySavedCards() {
    savedPageEl.classList = "show";
 
    // load cards
+   // TODO ONLY FOR TESTING
    loadCards();
 
    // select the card columns element
