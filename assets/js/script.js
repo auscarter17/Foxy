@@ -21,7 +21,7 @@ var foxBio = "";
 var bio = [
    "Enjoys long walks on any beach where there may be chickens.",
 
-   "I’m not like other foxes, I’m a totally authentic fur real free spirit.",
+   "I'm not like other foxes, I'm a totally authentic fur real free spirit.",
 
    "Most well known for jumping over the lazy dog.",
 
@@ -31,9 +31,9 @@ var bio = [
 
    "I always have a hard time making decisions, I can be a little fennecy.",
 
-   "Everyone keeps asking me what I say, I don’t get it.",
+   "Everyone keeps asking me what I say, I don't get it.",
 
-   "Oh, you said FAUX fur, that’s a huge relief.",
+   "Oh, you said FAUX fur, that's a huge relief.",
 
    "You may recognize me from the hit video game Minecraft.",
 
@@ -123,6 +123,12 @@ function pullData(data) {
    var city = data.results[0].location.city;
    var state = data.results[0].location.state;
 
+   // call cardBio function to assign a bio
+   cardBio();
+
+   // the bio for the fox card
+   var bio = foxBio;
+
    // create an object to pass into card generation function
    var tempObj = {
       "title": title,
@@ -130,7 +136,8 @@ function pullData(data) {
       "last": lastName,
       "age": age,
       "city": city,
-      "state": state
+      "state": state,
+      "bio": bio
    }
 
    // call to generate card text
@@ -185,20 +192,18 @@ function buildCardText(dataObj) {
    cardStateEl.textContent = dataObj.state;
    cardBodyEl.appendChild(cardStateEl);
 
-   cardBio();
-
-   // TODO LOREM NEEDS GONE
-   var cardDetails = document.createElement("span");
-   cardDetails.setAttribute("id", "card-Details");
-   cardDetails.classList = "fox-bio column is-two-fifths is-offset-2 has-text-right";
-   cardDetails.textContent = foxBio;
-   cardBodyEl.appendChild(cardDetails);
+   // create bio element for card
+   var cardBioEl = document.createElement("span");
+   cardBioEl.setAttribute("id", "card-bio");
+   cardBioEl.classList = "fox-bio column is-two-fifths is-offset-2 has-text-right";
+   cardBioEl.textContent = dataObj.bio;
+   cardBodyEl.appendChild(cardBioEl);
 
    // add card to the card div element
    cardRowEl.appendChild(cardBodyEl);
 }
 
-// 
+// function to iterate through the bio array
 function cardBio() {
    var tempArr = "";
    tempArr = bio.shift();
@@ -239,6 +244,8 @@ function yesOrNo(event) {
    var cardCity = $("#card-city").text();
    // fox state
    var cardState = $("#card-state").text();
+   // fox bio
+   var cardBio = $("#card-bio").text();
 
    // initialize a temp object
    var tempObj = {};
@@ -250,7 +257,8 @@ function yesOrNo(event) {
          "cardName": cardName,
          "cardAge": cardAge,
          "cardCity": cardCity,
-         "cardState": cardState
+         "cardState": cardState,
+         "cardBio": cardBio
       }
 
       // push the temp object to the global array
@@ -312,6 +320,11 @@ function displaySavedCards() {
       cardStateEl.classList = "saved-card-state";
       cardStateEl.textContent = savedFoxes[i].cardState;
       cardBodyEl.appendChild(cardStateEl);
+
+      var cardBioEl = document.createElement("p");
+      cardBioEl.classList = "saved-card-bio";
+      cardBioEl.textContent = savedFoxes[i].cardBio;
+      cardBodyEl.appendChild(cardBioEl);
 
       // append card body to card container
       savedCardsEl.appendChild(cardBodyEl);
