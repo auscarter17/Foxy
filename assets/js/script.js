@@ -164,7 +164,7 @@ function buildCardText(dataObj) {
 
    var cardLogo = document.createElement("img");
    cardLogo.setAttribute("style", "max-height: 60px");
-   cardLogo.src = "./assets/images/New Project.png";
+   cardLogo.src = "./assets/images/smallFox.png";
    cardBodyEl.appendChild(cardLogo);
 
 
