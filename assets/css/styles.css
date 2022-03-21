@@ -78,6 +78,10 @@ body {
     
   }
 
+  #fox-image {
+    object-fit: cover;
+  }
+
   .fox-details {
     left: 0;
   }
@@ -134,7 +138,7 @@ body {
     font-size: xx-large;
 }
 
-#card-Details {
+#card-bio {
     font-size: x-large;
     position: relative;
     top: 80px;
