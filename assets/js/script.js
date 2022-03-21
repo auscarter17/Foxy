@@ -286,8 +286,6 @@ function displaySavedCards() {
    cardPageEl.classList = "hide";
    savedPageEl.classList = "show";
 
-   loadCards();
-
    // select the card columns element
    var savedCardsEl = document.querySelector(".saved-columns");
 
@@ -354,7 +352,7 @@ function loadCards() {
 }
 
 // event listener to show landing page on load
-addEventListener("load", displaySavedCards);
+addEventListener("load", landingShow);
 // event listener on start button (landing page) to move from landing page to card page
 startCardBtnEl.addEventListener("click", buildCard);
 // event listener on either check or cross button (card page) to either save data
