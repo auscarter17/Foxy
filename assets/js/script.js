@@ -160,7 +160,7 @@ function buildCardText(dataObj) {
 
    // create element to card
    var cardBodyEl = document.createElement("div");
-   cardBodyEl.classList = "fox-details column is-two-fifths has-text-left";
+   cardBodyEl.classList = "fox-details";
 
    var cardLogo = document.createElement("img");
    cardLogo.setAttribute("style", "max-height: 60px");
@@ -192,10 +192,11 @@ function buildCardText(dataObj) {
    cardStateEl.textContent = dataObj.state;
    cardBodyEl.appendChild(cardStateEl);
 
+
    // create bio element for card
    var cardBioEl = document.createElement("span");
    cardBioEl.setAttribute("id", "card-bio");
-   cardBioEl.classList = "fox-bio column is-two-fifths is-offset-2 has-text-right";
+   cardBioEl.classList = "fox-bio";
    cardBioEl.textContent = dataObj.bio;
    cardBodyEl.appendChild(cardBioEl);
 

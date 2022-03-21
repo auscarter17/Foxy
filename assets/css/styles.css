@@ -71,8 +71,6 @@ body {
 
   .fox-details, .fox-bio {
     font-family: 'Indie Flower', cursive;
-    position:absolute;
-    bottom:0;
   }
 
   span {
@@ -119,6 +117,28 @@ body {
   .hide {
     display: none;
   }
+
+
+#card-text {
+    
+    justify-content: center;
+}
+
+#card-text img {
+    justify-content: center;
+    max-height: 100px;
+    margin:50px;
+}
+
+#card-name {
+    font-size: xx-large;
+}
+
+#card-Details {
+    font-size: x-large;
+    position: relative;
+    top: 80px;
+}
 
   /* Splash Page Style */
 
@@ -205,3 +225,4 @@ body {
 .hide {
   display: none;
 }
+
