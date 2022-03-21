@@ -273,10 +273,6 @@ function displaySavedCards() {
    cardPageEl.classList = "hide";
    savedPageEl.classList = "show";
 
-   // load cards
-   // TODO ONLY FOR TESTING
-   loadCards();
-
    // select the card columns element
    var savedCardsEl = document.querySelector(".saved-columns");
 
