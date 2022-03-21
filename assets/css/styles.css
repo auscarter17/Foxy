@@ -186,7 +186,6 @@ body {
   width: auto;
   height: auto;
   position: relative;
-  
 }
 
 .btnHome {
@@ -194,7 +193,6 @@ body {
   display: block;
   margin-top: 40rem;
   right: 27rem;
-  
 }
 
 .tile {
@@ -210,12 +208,11 @@ body {
   text-align: center;
   margin: auto;
   color: white;
-
+  padding: 20px;
 }
 
-.saved-card-image {
-  max-height: 50%;
-  width: auto;
+.saved-card-img {
+max-height: 200px;
 }
   
 .show {
