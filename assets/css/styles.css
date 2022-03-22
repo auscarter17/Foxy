@@ -237,3 +237,12 @@ max-height: 200px;
   display: none;
 }
 
+.saved-card-style {
+  background-image: -webkit-linear-gradient(30deg, #000 45%, #4CBFFF 45%);
+  border: 3px solid white;
+  border-radius: 90px;
+  text-shadow: -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
