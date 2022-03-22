@@ -179,6 +179,11 @@ body {
   box-shadow: 0 15px 15px #2f2f2f;
 }
 
+.btn2:hover {
+  transform: rotateX(15deg);
+  box-shadow: 0 15px 15px #2f2f2f;
+}
+
 .logo-text {
     left: 0;
     position:absolute;
@@ -196,15 +201,16 @@ body {
 .btnHome {
   position: relative;
   display: block;
-  margin-top: 40rem;
+  margin-top: 30rem;
   right: 27rem;
 }
 
 .btnFoxes {
     position: relative;
     display: block;
-    margin-top: 40rem;
+    margin-top: 30rem;
     right: 27rem;
+    margin-left: 1rem;
 }
 
 .tile {
