@@ -10,6 +10,8 @@ var startCardBtnEl = document.querySelector("#start-card");
 var checkBtnEl = document.querySelector("#checkBtn");
 // access cross button
 var crossBtnEl = document.querySelector("#crossBtn");
+// access saved Foxes
+var savedBtnEl = document.querySelector("#savedBtn");
 
 // global variable to save foxes
 var savedFoxes = [];
@@ -358,3 +360,5 @@ startCardBtnEl.addEventListener("click", buildCard);
 // event listener on either check or cross button (card page) to either save data
 // and display new card, or simply display a new card
 cardPageEl.addEventListener("click", yesOrNo)
+// display saved foxes
+savedBtnEl.addEventListener("click", displaySavedCards);
