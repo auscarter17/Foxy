@@ -11,7 +11,7 @@ var checkBtnEl = document.querySelector("#checkBtn");
 // access cross button
 var crossBtnEl = document.querySelector("#crossBtn");
 // access saved Foxes
-var savedBtnEl = document.querySelector("#savedBtn");
+var savedBtnEl = document.querySelector("#savedFoxes");
 
 // global variable to save foxes
 var savedFoxes = [];
