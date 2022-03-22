@@ -12,6 +12,8 @@ var checkBtnEl = document.querySelector("#checkBtn");
 var crossBtnEl = document.querySelector("#crossBtn");
 // access saved Foxes
 var savedBtnEl = document.querySelector("#savedFoxes");
+// access container that holds image to return to main menu
+var mainMenuBtn = document.querySelector("#main-menu-button");
 
 // global variable to save foxes
 var savedFoxes = [];
@@ -292,6 +294,9 @@ function displaySavedCards() {
    // select the card columns element
    var savedCardsEl = document.querySelector(".saved-columns");
 
+   // if there are cards, clear old and repopulate
+   savedCardsEl.innerHTML = "";
+
    // loop through global array
    for (var i = 0; i < savedFoxes.length; i++) {
       // create card body element
@@ -363,3 +368,5 @@ startCardBtnEl.addEventListener("click", buildCard);
 cardPageEl.addEventListener("click", yesOrNo)
 // display saved foxes
 savedBtnEl.addEventListener("click", displaySavedCards);
+// return to main menu
+mainMenuBtn.addEventListener("click", landingShow);

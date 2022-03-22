@@ -226,6 +226,11 @@ body {
 .saved-card-img {
 max-height: 200px;
 }
+
+#main-menu-button {
+  background-color: #F5AB49;
+  margin: auto;
+}
   
 .show {
   display: block;
@@ -234,4 +239,3 @@ max-height: 200px;
 .hide {
   display: none;
 }
-
