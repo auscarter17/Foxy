@@ -28,6 +28,7 @@ body {
     width: 800px;
     height: 600px;
     perspective: 1000px;
+    margin: 20px;
   }
   
   .flip-card-inner {
@@ -60,7 +61,8 @@ body {
   }
   
   .flip-card-back {
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    background-color: #34ADFF;
+    background-image: -webkit-linear-gradient(330deg, #4CBFFF 45%, #2f2f2f 45%);
     color: white;
     text-shadow: -1px 1px 0 #000,
     1px 1px 0 #000,
@@ -241,3 +243,12 @@ max-height: 200px;
   display: none;
 }
 
+.saved-card-style {
+  background-image: -webkit-linear-gradient(30deg, #000 45%, #4CBFFF 45%);
+  border: 3px solid white;
+  border-radius: 90px;
+  text-shadow: -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+}

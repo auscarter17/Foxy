@@ -297,7 +297,7 @@ function displaySavedCards() {
       // create card body element
       var cardBodyEl = document.createElement("div");
       // assign style
-      cardBodyEl.classList = "column saved-column is-two-fifths";
+      cardBodyEl.classList = "column saved-column is-two-fifths saved-card-style block";
 
       // create card image element
       var cardImgEl = document.createElement("img");
