@@ -28,6 +28,7 @@ body {
     width: 800px;
     height: 600px;
     perspective: 1000px;
+    margin: 20px;
   }
   
   .flip-card-inner {
@@ -37,7 +38,6 @@ body {
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   
   .flip-card:hover .flip-card-inner {
@@ -60,7 +60,8 @@ body {
   }
   
   .flip-card-back {
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    background-color: #34ADFF;
+    background-image: -webkit-linear-gradient(330deg, #4CBFFF 45%, #2f2f2f 45%);
     color: white;
     text-shadow: -1px 1px 0 #000,
     1px 1px 0 #000,
