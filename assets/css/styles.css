@@ -37,7 +37,7 @@ body {
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
   }
   
   .flip-card:hover .flip-card-inner {
@@ -101,6 +101,7 @@ body {
 
   #checkBtn, #crossBtn {
       padding: 0px 100px;
+      margin-top: 10px;
   }
 
   .button-right {
@@ -197,6 +198,13 @@ body {
   display: block;
   margin-top: 40rem;
   right: 27rem;
+}
+
+.btnFoxes {
+    position: relative;
+    display: block;
+    margin-top: 40rem;
+    right: 27rem;
 }
 
 .tile {
