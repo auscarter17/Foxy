@@ -12,8 +12,10 @@ var checkBtnEl = document.querySelector("#checkBtn");
 var crossBtnEl = document.querySelector("#crossBtn");
 // access saved Foxes
 var savedBtnEl = document.querySelector("#savedFoxes");
-// access container that holds image to return to main menu
+// access button to return to main menu
 var mainMenuBtn = document.querySelector("#main-menu-button");
+// access button to return to main menu
+var savedMenuBtn = document.querySelector("#saved-menu-button");
 
 // global variable to save foxes
 var savedFoxes = [];
@@ -370,3 +372,5 @@ cardPageEl.addEventListener("click", yesOrNo)
 savedBtnEl.addEventListener("click", displaySavedCards);
 // return to main menu
 mainMenuBtn.addEventListener("click", landingShow);
+// return to main menu
+savedMenuBtn.addEventListener("click", landingShow);

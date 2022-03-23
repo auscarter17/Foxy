@@ -235,9 +235,11 @@ body {
 max-height: 200px;
 }
 
-#main-menu-button {
+#main-menu-button,
+#saved-menu-button {
   background-color: #F5AB49;
   margin: auto;
+  width: auto;
 }
   
 .show {
