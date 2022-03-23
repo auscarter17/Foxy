@@ -23,7 +23,6 @@ var savedFoxes = [];
 // global bio 
 var foxBio = "";
 
-// TODO CHANGE BIO AND ADD TO CARDS
 var bio = [
    "Enjoys long walks on any beach where there may be chickens.",
 

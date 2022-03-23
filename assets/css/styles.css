@@ -1,12 +1,11 @@
-* { 
-    font-family: 'Fredoka One', sans-serif;
-    font-weight: lighter;
+* {
+  font-family: "Fredoka One", sans-serif;
+  font-weight: lighter;
 }
 
 body {
-    background-color: hsl(0, 0%, 21%);
-    min-height: 100vh;
-  
+  background-color: hsl(0, 0%, 21%);
+  min-height: 100vh;
 }
 
 .hero-body {
@@ -14,101 +13,110 @@ body {
 }
 
 .foxText {
-  background: #F5AB49;
-  background: -webkit-linear-gradient(to top, #F5AB49 40%, #F7F8FF 67%, #F5AB49 100%);
-  background: -moz-linear-gradient(to top, #F5AB49 40%, #F7F8FF 67%, #F5AB49 100%);
-  background: linear-gradient(to top, #F5AB49 40%, #F7F8FF 67%, #F5AB49 100%);
+  background: #f5ab49;
+  background: -webkit-linear-gradient(
+    to top,
+    #f5ab49 40%,
+    #f7f8ff 67%,
+    #f5ab49 100%
+  );
+  background: -moz-linear-gradient(
+    to top,
+    #f5ab49 40%,
+    #f7f8ff 67%,
+    #f5ab49 100%
+  );
+  background: linear-gradient(to top, #f5ab49 40%, #f7f8ff 67%, #f5ab49 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .flip-card {
-    background-color: transparent;
-    width: 800px;
-    height: 600px;
-    perspective: 1000px;
-    margin: 20px;
-  }
-  
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    
-  }
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    min-width: 800px;
-    min-height: 600px;
-  }
-  
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
-  .flip-card-back {
-    background-color: #34ADFF;
-    background-image: -webkit-linear-gradient(330deg, #4CBFFF 45%, #2f2f2f 45%);
-    color: white;
-    text-shadow: -1px 1px 0 #000,
-    1px 1px 0 #000,
-    1px -1px 0 #000,
+  background-color: transparent;
+  width: 800px;
+  height: 600px;
+  perspective: 1000px;
+  margin: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  min-width: 800px;
+  min-height: 600px;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #34adff;
+  background-image: -webkit-linear-gradient(330deg, #4cbfff 45%, #2f2f2f 45%);
+  color: white;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
     -1px -1px 0 #000;
-    transform: rotateY(180deg);
-  }
+  transform: rotateY(180deg);
+}
 
-  .fox-details, .fox-bio {
-    font-family: 'Indie Flower', cursive;
-  }
+.fox-details,
+.fox-bio {
+  font-family: "Indie Flower", cursive;
+}
 
-  span {
-    line-height: 2;
-    
-  }
+span {
+  line-height: 2;
+}
 
-  #fox-image {
-    object-fit: cover;
-  }
+#fox-image {
+  object-fit: cover;
+}
 
-  .fox-details {
-    left: 0;
-  }
+.fox-details {
+  left: 0;
+}
 
-  .fox-bio {
-    right: 0;
-  }
+.fox-bio {
+  right: 0;
+}
 
-  .container {
-      z-index: 9999;
-  }
+.container {
+  z-index: 9999;
+}
 
-  .card-deck {
-      display: flex;
-      justify-content: center;
-  }
+.card-deck {
+  display: flex;
+  justify-content: center;
+}
 
-  #checkBtn, #crossBtn {
-      padding: 0px 100px;
-      margin-top: 10px;
-  }
+#checkBtn,
+#crossBtn {
+  padding: 0px 100px;
+  margin-top: 10px;
+}
 
-  .button-right {
-    border-radius: 50px;
-  }
+.button-right {
+  border-radius: 50px;
+}
 
 #checkBtn {
   border-top-left-radius: 50px;
@@ -121,47 +129,39 @@ body {
   color: black;
 }
 
-  .hide {
-    display: none;
-  }
-
+.hide {
+  display: none;
+}
 
 #card-text {
-    
-    justify-content: center;
+  justify-content: center;
 }
 
 #card-text img {
-    justify-content: center;
-    max-height: 100px;
-    margin:50px;
+  justify-content: center;
+  max-height: 100px;
+  margin: 50px;
 }
 
 #card-name {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
 #card-bio {
-    font-size: x-large;
-    position: relative;
-    top: 80px;
+  font-size: x-large;
+  position: relative;
+  top: 80px;
 }
 
-  /* Splash Page Style */
+/* Splash Page Style */
 
-  .hero-body {
-    background-color: #34ADFF;
-    background-image: -webkit-linear-gradient(30deg, #2f2f2f 45%, #4CBFFF 45%);
-    min-height: 100vh;
-    
-  }
+.hero-body {
+  background-color: #34adff;
+  background-image: -webkit-linear-gradient(30deg, #2f2f2f 45%, #4cbfff 45%);
+  min-height: 100vh;
+}
 
-  /* .navbar {
-    background-color: #34ADFF;
-  background-image: -webkit-linear-gradient(30deg, #2f2f2f 32.45%, #4CBFFF 32.45%);
-  } */
-
-  .btn {
+.btn {
   display: block;
   margin: 40px 0;
   width: 240px;
@@ -173,7 +173,7 @@ body {
   border-radius: 6px;
   outline: none;
   cursor: pointer;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
 
 .btn1:hover {
@@ -187,11 +187,11 @@ body {
 }
 
 .logo-text {
-    left: 0;
-    position:absolute;
-    text-align:center;
-    top: 30px;
-    width: 100%
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  width: 100%;
 }
 
 .img {
@@ -208,11 +208,11 @@ body {
 }
 
 .btnFoxes {
-    position: relative;
-    display: block;
-    margin-top: 30rem;
-    right: 27rem;
-    margin-left: 1rem;
+  position: relative;
+  display: block;
+  margin-top: 30rem;
+  right: 27rem;
+  margin-left: 1rem;
 }
 
 .tile {
@@ -232,16 +232,16 @@ body {
 }
 
 .saved-card-img {
-max-height: 200px;
+  max-height: 200px;
 }
 
 #main-menu-button,
 #saved-menu-button {
-  background-color: #F5AB49;
+  background-color: #f5ab49;
   margin: auto;
   width: auto;
 }
-  
+
 .show {
   display: block;
 }
@@ -251,12 +251,9 @@ max-height: 200px;
 }
 
 .saved-card-style {
-  background-image: -webkit-linear-gradient(30deg, #000 45%, #4CBFFF 45%);
+  background-image: -webkit-linear-gradient(30deg, #000 45%, #4cbfff 45%);
   border: 3px solid white;
   border-radius: 90px;
-  text-shadow: -1px 1px 0 #000,
-    1px 1px 0 #000,
-    1px -1px 0 #000,
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
     -1px -1px 0 #000;
 }
-
