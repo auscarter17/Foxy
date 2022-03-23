@@ -23,10 +23,6 @@ var savedFoxes = [];
 // global bio 
 var foxBio = "";
 
-<<<<<<< HEAD
-=======
-// array holding all the bios to randomly generate
->>>>>>> 38bc0ed8224ff332449c0ac524014175b372b47a
 var bio = [
    "Enjoys long walks on any beach where there may be chickens.",
 
@@ -173,8 +169,8 @@ function buildCardText(dataObj) {
    cardBodyEl.classList = "fox-details";
 
    var cardLogo = document.createElement("img");
-   cardLogo.setAttribute("style", "max-height: 60px");
-   cardLogo.src = "./assets/images/smallFox.png";
+   cardLogo.setAttribute("style", "max-height: 200px");
+   cardLogo.src = "./assets/images/Minimal_Animal_Red_Fox_Logo.png";
    cardBodyEl.appendChild(cardLogo);
 
 
