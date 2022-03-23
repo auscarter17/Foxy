@@ -23,6 +23,10 @@ var savedFoxes = [];
 // global bio 
 var foxBio = "";
 
+<<<<<<< HEAD
+=======
+// array holding all the bios to randomly generate
+>>>>>>> 38bc0ed8224ff332449c0ac524014175b372b47a
 var bio = [
    "Enjoys long walks on any beach where there may be chickens.",
 
@@ -228,8 +232,6 @@ function buildCardImg(imageLink) {
    var foxImgEl = document.createElement("img");
    // set the id of the image for access purposes
    foxImgEl.setAttribute("id", "fox-image");
-   //TODO ADD STYLE CLASS
-   /*foxImgEl.className =*/
    // set the source to the generated image link
    foxImgEl.src = imageLink;
    // add the image to the image container
