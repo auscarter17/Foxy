@@ -23,10 +23,7 @@ var savedFoxes = [];
 // global bio 
 var foxBio = "";
 
-<<<<<<< HEAD
-=======
 // array holding all the bios to randomly generate
->>>>>>> 38bc0ed8224ff332449c0ac524014175b372b47a
 var bio = [
    "Enjoys long walks on any beach where there may be chickens.",
 
