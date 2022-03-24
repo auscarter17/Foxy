@@ -198,19 +198,20 @@ span {
   width: auto;
   height: auto;
   position: relative;
+  margin-right: 45rem;
 }
 
 .btnHome {
   position: relative;
   display: block;
-  margin-top: 30rem;
+  margin-top: 24rem;
   right: 27rem;
 }
 
 .btnFoxes {
   position: relative;
   display: block;
-  margin-top: 30rem;
+  margin-top: 24rem;
   right: 27rem;
   margin-left: 1rem;
 }
